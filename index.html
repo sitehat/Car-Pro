@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Car Pro</title></head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="home" class="screen on">
+  <div class="col">
+    <svg viewBox="0 0 240 118" class="lg"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff3d3d"/><stop offset="1" stop-color="#ffb020"/></linearGradient></defs>
+      <path d="M14 66 L40 46 Q52 34 74 34 H150 Q170 34 182 48 L214 58 Q226 62 226 72 V78 H14Z" fill="url(#g)"/>
+      <path d="M58 44 H100 V58 H46Z M108 44 H148 Q160 44 168 56 H108Z" fill="#0b1220"/>
+      <circle cx="64" cy="80" r="13" fill="#111" stroke="#fff" stroke-width="4"/><circle cx="176" cy="80" r="13" fill="#111" stroke="#fff" stroke-width="4"/>
+      <text x="120" y="112" text-anchor="middle" font-size="27" font-weight="900" fill="#fff" font-family="Arial Black,Arial,sans-serif">CAR PRO</text></svg>
+    <button id="start" class="btn">▶ START</button>
+  </div>
+  <div class="mid"><div class="carsel"><button id="prev" class="btn s">◀</button><span id="mname"></span><button id="next" class="btn s">▶</button></div></div>
+  <div class="panel">
+    <label>চালকের নাম <input id="pname" maxlength="12"></label>
+    <label>আমার গাড়ির নম্বর <select id="pnum"></select></label>
+    <div class="hint">প্রতিযোগীদের নাম (গাড়ির নম্বর অনুযায়ী)</div>
+    <div id="rows"></div>
+  </div>
+  <footer>Powered by Mahin</footer>
+</div>
+
+<div id="hud">
+  <div id="board"></div>
+  <div id="top"><div id="tm">5:00</div><div id="pos"></div><div class="bar"><div id="prog"></div></div></div>
+  <button id="pb" class="ctl sm">⏸</button>
+  <div id="msg"></div>
+  <div id="spdw"><b id="spd">0</b> km/h<div class="bar f"><div id="fuel"></div></div></div>
+  <div id="left"><button id="bl" class="ctl">◀</button><button id="br" class="ctl">▶</button></div>
+  <div id="right"><button id="bn" class="ctl nitro">⚡<small>BOOST</small></button><div><button id="bb" class="ctl brk">BRAKE</button><button id="bg" class="ctl gas">GAS</button></div></div>
+</div>
+
+<div id="pause" class="screen center"><h2>বিরতি</h2><button id="resume" class="btn">▶ চালিয়ে যাও</button><button id="phome" class="btn s">🏠 হোম</button></div>
+<div id="res" class="screen center"></div>
+<script type="module" src="/src/main.js"></script>
+</body></html>
